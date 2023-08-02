@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    background-color: #f2f7f8;
+}
+
+.section-one, .section-two, .section-three {
+    width: 100%;
+}
+
+.section-one {
+    background-image: url('loml.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; /*cover; */
+    background-position: right;
+}
+.section-three {
+    background: linear-gradient(64deg, #018141 0%, #00C060 100%);
+}
+.arc-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f7f8;
+    z-index: -1; /* Move the arc behind the section content */
+    overflow: hidden;
+  } 
+  
+  /* SVG Arc Styles */
+  .arc-background svg path {
+    background-color: white;
+    border: 2px solid maroon;
+  } 
+
+.container {
+    width: 90%;
+    max-width: 1195px;
+    margin: 0 auto;
+    /*border: 2px solid yellow;*/
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid purple;
+    align-items: center;
+}
+
+.logo{
+    border: 2px solid red;
+}
+
+.header_menu {
+    border: 2px solid blue;
+}
+.header_menu ul {
+    display: inline;
+    padding: 0;
+    border: 2px solid orange;
+}
+.header_menu li {
+    display: inline;
+    margin-left: 1em;
+    border: 2px solid black;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    margin-top: 17.88rem;
+    margin-bottom: 17.44rem;
+    gap: 1.375rem;
+}
+.hero-content {
+    flex-basis: 40%;
+}
+.hero-img {
+    flex-basis: 60%;
+}
+.hero-img img {
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 35.3125rem);
+    grid-template-rows: repeat(3, 26.375rem);
+    gap: 2.59rem; /* Adjust the gap between grid items as needed */
+    max-width: 72.8125rem; /* 2 columns * card width */
+    border: 2px solid purple;
+  }
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;
+    align-items: center;
+    color: #333; /* Add your desired text color */
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid orange;
+    border-radius: 1.25rem;
+    background: #FFF;  /* Add your desired background color */
+    box-shadow: 0px 0px 1px 0px #CED3DA;
+    align-items: center;
+  }
+    
+.grid-item:not(.card-one):hover {
+    background: linear-gradient(180deg, #00C060 0%, #018141 100%);
+    color: white;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: flex-start;
+    border: 2px solid red;
+}
+.card-one {
+    display: block;
+    background-color: #f2f7f8;
+    margin: auto;
+}
+
+.popup_faqs {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.popupcolumn {
+    flex-basis: 35%;
+}
+
+.accordion {
+    flex-basis: 65%;
+}
+
+.popupcolumn {
+    display: flex;
+    flex-direction: column;
+    gap: 3.38rem;
+}
+
+.popupcolumn img {
+    width: 19.8125rem;
+    height: 18.625rem;
+}
+.activation-button {
+    width: 30%;
+}
+
+textarea {
+    display: block;
+}
+
+form button {
+    display: block;
+    border: 5px dotted darkred;
+
+}
+
+.popupform {
+    display: none;
+}
+
+.CTA {
+    background-image: url("/Assets/Subscribe\ Frame.png");
+    width: 72.8125rem;
+    height: 25.625rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 9.38rem auto;
+    display: flex;
+    align-items: center;
+    gap: 3.25rem;
+    justify-content: center;
+  }
+
+.CTAcontent{
+    width: 36.875rem;
+    height: 7.375rem;
+}
+
+@media (max-width: 650px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1-column layout for mobile */
+        grid-template-rows: repeat(6, 17rem); /* 26.375rem 6 rows for mobile */
+        max-width: 21.6875rem; /* Card width for mobile */
+      }
+    .section-one {
+        background-color: green;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 2em 0;
+    }
+    .popup_faqs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popupcolumn, .accordion {
+        flex-basis: 100%;
+    }
+}
